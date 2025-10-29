@@ -1,2 +1,2 @@
-# hilaryjium-econ.github.io
+# yonghangji.github.io
 My personal academic website
