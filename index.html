@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yonghang JI - Economics</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 乌龟爬行进度条 -->
+    <div class="turtle-progress" id="turtleProgress">
+        <div class="turtle">🐶</div>
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <!-- 头部信息 -->
+        <header class="header-section">
+            <div class="header-content">
+                <div class="text-info">
+                    <h1>Yonghang JI</h1>
+                    <div class="contact-info">
+                        <span class="info-line">PhD Candidate in Economics at the <a href="https://econ.fss.um.edu.mo" target="_blank">University of Macau</a></span>
+                        <span class="info-line welcome-text">Welcome to my site! My research interest lies in <span class="bold-text">Microeconomic Theory</span>, particularly in <span class="bold-text">dynamic games</span>.</span>
+                        <span class="info-line">I am on the 2025-2026 job market</span>
+                        <span class="info-line">
+                            Email me here: <a href="mailto:yc27309@um.edu.mo" class="email-link">yc27309@um.edu.mo</a>
+                        </span>
+                        <div class="button-container">
+                            <a href="cv.pdf" class="cv-button">Download CV</a>
+                            <span class="paw-print">🐾</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-container">
+                    <img src="assets/photo.jpg" alt="Yonghang JI" class="profile-photo">
+                </div>
+            </div>
+        </header>
+
+        <!-- Job Market Paper部分 -->
+        <section class="research-section">
+            <h2>Job Market Paper</h2>
+            
+            <div class="paper">
+                <div class="paper-header">
+                    <h3><a href="#" class="paper-title">Worker Selection and Efficiency</a> <span class="coauthor">(with <a href="https://allenvong.net/" target="_blank">Allen Vong</a>)</span></h3>
+                </div>
+                <p class="abstract"><span class="abstract-label">Abstract:</span> We study an employment relationship in which a manager repeatedly selects one worker from a group to perform a task subject to moral hazard, while others rest. We explicitly construct an equilibrium that achieves efficient worker performance whenever an efficient equilibrium exists. Our equilibrium features a simple and intuitive review strategy: the manager reviews a worker's performance only when the worker is selected again after a rest period. This review strategy effectively disciplines workers and ensures efficiency. We also extend our analysis to settings with heterogeneous workers and discuss the implications for organizational design.</p>
+            </div>
+        </section>
+
+        <!-- Work in Progress部分 -->
+        <section class="research-section">
+            <h2>Work in Progress</h2>
+            
+            <div class="work-in-progress">
+                <ul>
+                    <li>Moral Hazard and Operation License Transfers</li>
+                    <li>Mediation in Monopolistic Markets with Unknown Cost</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // 乌龟进度条动画
+        document.addEventListener('DOMContentLoaded', function() {
+            const turtleProgress = document.getElementById('turtleProgress');
+            const progressFill = document.querySelector('.progress-fill');
+            const turtle = document.querySelector('.turtle');
+            
+            // 显示进度条
+            turtleProgress.style.display = 'block';
+            
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 2;
+                progressFill.style.width = progress + '%';
+                turtle.style.left = `calc(${progress}% - 20px)`;
+                
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    // 进度完成后隐藏进度条
+                    setTimeout(() => {
+                        turtleProgress.style.opacity = '0';
+                        setTimeout(() => {
+                            turtleProgress.style.display = 'none';
+                        }, 500);
+                    }, 500);
+                }
+            }, 30);
+        });
+    </script>
+</body>
+</html>

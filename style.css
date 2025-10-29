@@ -1,0 +1,434 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+/* 乌龟进度条样式 */
+.turtle-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(120, 81, 169, 0.3); /* 使用指定的紫色 */
+    z-index: 1000;
+    display: none;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #d8bfd8, #7851A9); /* 使用指定的紫色 */
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 0 2px 2px 0;
+}
+
+.turtle {
+    position: absolute;
+    top: -12px;
+    left: -20px;
+    font-size: 20px;
+    transition: left 0.3s ease;
+    z-index: 1001;
+}
+
+.main-content {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    padding: clamp(20px, 4vw, 40px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+.header-section {
+    margin-bottom: clamp(30px, 5vw, 40px);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: clamp(20px, 4vw, 40px);
+    flex-wrap: wrap;
+}
+
+.text-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+h1 {
+    font-size: clamp(28px, 4vw, 32px);
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(8px, 2vw, 12px);
+    font-size: clamp(14px, 2vw, 15px);
+    color: #555;
+}
+
+.info-line {
+    display: block;
+}
+
+.welcome-text {
+    text-align: justify;
+}
+
+/* 所有链接都使用指定的紫色 */
+.contact-info a:not(.cv-button) {
+    color: #7851A9; /* 指定的紫色 */
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 500;
+}
+
+.contact-info a:not(.cv-button):hover {
+    color: #674399; /* 深一点的紫色 */
+    text-decoration: underline;
+}
+
+.email-link {
+    color: #7851A9 !important; /* 指定的紫色 */
+}
+
+.plain-text {
+    color: #555;
+}
+
+/* 按钮容器 */
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.cv-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #d8bfd8, #b19cd9); /* 淡紫色渐变 */
+    color: white !important; /* 强制白色文字 */
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    width: auto;
+    min-width: 120px;
+    max-width: 140px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 2px 8px rgba(120, 81, 169, 0.2); /* 使用指定的紫色 */
+}
+
+.cv-button:hover {
+    background: linear-gradient(135deg, #b19cd9, #7851A9); /* 使用指定的紫色 */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(120, 81, 169, 0.3); /* 使用指定的紫色 */
+    text-decoration: none;
+    color: white !important; /* 保持白色文字 */
+}
+
+/* 大的小狗爪印 */
+.paw-print {
+    font-size: 32px; /* 更大的爪印 */
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    display: inline-block;
+    line-height: 1;
+}
+
+.button-container:hover .paw-print {
+    opacity: 1;
+    transform: scale(1.2) rotate(8deg);
+}
+
+.bold-text {
+    font-weight: 600;
+}
+
+.photo-container {
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+.profile-photo {
+    width: clamp(150px, 25vw, 220px);
+    height: auto;
+    border-radius: 4px;
+    /* 删除边框和阴影 */
+    box-shadow: none;
+    border: none;
+    object-fit: cover;
+}
+
+.research-section {
+    margin-bottom: clamp(30px, 5vw, 40px);
+}
+
+/* 删除所有标题横线 */
+h2 {
+    font-size: clamp(20px, 3vw, 24px);
+    font-weight: 600;
+    margin-bottom: clamp(15px, 3vw, 20px);
+    padding-bottom: 0; /* 删除底部内边距 */
+    border-bottom: none; /* 删除横线 */
+    color: #222;
+}
+
+.paper {
+    margin-bottom: clamp(20px, 4vw, 30px);
+    padding-bottom: 0;
+    border-bottom: none; /* 确保没有横线 */
+}
+
+.paper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+h3 {
+    font-size: clamp(14px, 1.8vw, 15px); /* 调整为与abstract相同的字号 */
+    font-weight: 500;
+    color: #222;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.paper-title {
+    color: #7851A9; /* 指定的紫色 */
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 500;
+}
+
+.paper-title:hover {
+    color: #674399; /* 深一点的紫色 */
+    text-decoration: underline;
+}
+
+.coauthor {
+    font-size: clamp(13px, 1.7vw, 14px); /* 相应调整合作者字号 */
+    font-style: italic;
+    color: #555;
+    font-weight: 400;
+}
+
+.coauthor a {
+    color: #7851A9; /* 指定的紫色 */
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.coauthor a:hover {
+    color: #674399; /* 深一点的紫色 */
+    text-decoration: underline;
+}
+
+.paper-status {
+    font-size: 13px;
+    background-color: #f0f0f0;
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: #666;
+}
+
+.authors {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.abstract {
+    margin-bottom: 12px;
+    color: #444;
+    line-height: 1.7;
+    /* 摘要两端对齐 */
+    text-align: justify;
+    font-size: clamp(14px, 1.8vw, 15px);
+}
+
+.abstract-label {
+    font-weight: 600;
+    color: #222;
+}
+
+.paper-links {
+    display: flex;
+    gap: 15px;
+}
+
+.paper-links a {
+    color: #7851A9; /* 指定的紫色 */
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+    font-weight: 500;
+}
+
+.paper-links a:hover {
+    color: #674399; /* 深一点的紫色 */
+    text-decoration: underline;
+}
+
+.work-in-progress {
+    margin-top: 10px;
+}
+
+.work-in-progress ul {
+    margin-left: clamp(15px, 3vw, 20px); /* 响应式左侧间距 */
+    padding-left: 0;
+    list-style: disc; /* 添加小圆点项目符号 */
+    color: #444;
+}
+
+.work-in-progress li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    padding-left: 0;
+    font-size: clamp(14px, 1.8vw, 15px);
+}
+
+/* 响应式设计 - 移动端优化 */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .header-content {
+        flex-direction: column-reverse;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .text-info {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .photo-container {
+        align-self: center;
+    }
+    
+    .profile-photo {
+        width: 180px;
+    }
+    
+    .button-container {
+        justify-content: center;
+    }
+    
+    .cv-button {
+        width: 140px;
+        margin: 0;
+    }
+    
+    .paw-print {
+        font-size: 28px; /* 移动端稍小一点 */
+    }
+    
+    h3 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    
+    .paper-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: 15px;
+    }
+    
+    .profile-photo {
+        width: 150px;
+    }
+    
+    .work-in-progress ul {
+        margin-left: 15px;
+    }
+    
+    .contact-info {
+        text-align: left;
+    }
+    
+    .paw-print {
+        font-size: 26px;
+    }
+}
+
+/* 大屏幕优化 */
+@media (min-width: 1200px) {
+    .main-content {
+        max-width: 1100px;
+    }
+}
+
+/* 超小屏幕优化 */
+@media (max-width: 360px) {
+    body {
+        padding: 5px;
+    }
+    
+    .main-content {
+        padding: 12px;
+    }
+    
+    .profile-photo {
+        width: 130px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 18px;
+    }
+    
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .paw-print {
+        font-size: 24px;
+    }
+}
