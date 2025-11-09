@@ -19,7 +19,7 @@ body {
     left: 0;
     width: 100%;
     height: 4px;
-    background: rgba(120, 81, 169, 0.3); /* 使用指定的紫色 */
+    background: rgba(120, 81, 169, 0.3);
     z-index: 1000;
     display: none;
 }
@@ -33,7 +33,7 @@ body {
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #d8bfd8, #7851A9); /* 使用指定的紫色 */
+    background: linear-gradient(90deg, #d8bfd8, #7851A9);
     width: 0%;
     transition: width 0.3s ease;
     border-radius: 0 2px 2px 0;
@@ -96,23 +96,24 @@ h1 {
 
 .welcome-text {
     text-align: justify;
+    color: #555 !important;
 }
 
 /* 所有链接都使用指定的紫色 */
 .contact-info a:not(.cv-button) {
-    color: #7851A9; /* 指定的紫色 */
+    color: #7851A9;
     text-decoration: none;
     transition: color 0.2s;
     font-weight: 500;
 }
 
 .contact-info a:not(.cv-button):hover {
-    color: #674399; /* 深一点的紫色 */
+    color: #674399;
     text-decoration: underline;
 }
 
 .email-link {
-    color: #7851A9 !important; /* 指定的紫色 */
+    color: #7851A9 !important;
 }
 
 .plain-text {
@@ -129,8 +130,8 @@ h1 {
 
 .cv-button {
     display: inline-block;
-    background: linear-gradient(135deg, #d8bfd8, #b19cd9); /* 淡紫色渐变 */
-    color: white !important; /* 强制白色文字 */
+    background: linear-gradient(135deg, #d8bfd8, #b19cd9);
+    color: white !important;
     padding: 10px 16px;
     border-radius: 6px;
     text-decoration: none;
@@ -143,20 +144,20 @@ h1 {
     border: none;
     cursor: pointer;
     font-size: 14px;
-    box-shadow: 0 2px 8px rgba(120, 81, 169, 0.2); /* 使用指定的紫色 */
+    box-shadow: 0 2px 8px rgba(120, 81, 169, 0.2);
 }
 
 .cv-button:hover {
-    background: linear-gradient(135deg, #b19cd9, #7851A9); /* 使用指定的紫色 */
+    background: linear-gradient(135deg, #b19cd9, #7851A9);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(120, 81, 169, 0.3); /* 使用指定的紫色 */
+    box-shadow: 0 4px 12px rgba(120, 81, 169, 0.3);
     text-decoration: none;
-    color: white !important; /* 保持白色文字 */
+    color: white !important;
 }
 
 /* 大的小狗爪印 */
 .paw-print {
-    font-size: 32px; /* 更大的爪印 */
+    font-size: 32px;
     opacity: 0.8;
     transition: all 0.3s ease;
     display: inline-block;
@@ -168,10 +169,13 @@ h1 {
     transform: scale(1.2) rotate(8deg);
 }
 
-.bold-text {
-    font-weight: 600;
-    color: #222; /* 与标题颜色一致 */
-    font-size: clamp(14px, 2vw, 15px); /* 与contact-info一致 */
+/* Microeconomic Theory 的样式 - 增强特异性 */
+.contact-info .bold-text,
+.text-info .bold-text,
+.info-line .bold-text {
+    font-weight: 600 !important;
+    color: #222 !important;
+    font-size: clamp(14px, 2vw, 15px) !important;
 }
 
 .photo-container {
@@ -184,7 +188,6 @@ h1 {
     width: clamp(150px, 25vw, 220px);
     height: auto;
     border-radius: 4px;
-    /* 删除边框和阴影 */
     box-shadow: none;
     border: none;
     object-fit: cover;
@@ -199,15 +202,15 @@ h2 {
     font-size: clamp(20px, 3vw, 24px);
     font-weight: 600;
     margin-bottom: clamp(15px, 3vw, 20px);
-    padding-bottom: 0; /* 删除底部内边距 */
-    border-bottom: none; /* 删除横线 */
+    padding-bottom: 0;
+    border-bottom: none;
     color: #222;
 }
 
 .paper {
     margin-bottom: clamp(20px, 4vw, 30px);
     padding-bottom: 0;
-    border-bottom: none; /* 确保没有横线 */
+    border-bottom: none;
 }
 
 .paper-header {
@@ -220,7 +223,7 @@ h2 {
 }
 
 h3 {
-    font-size: clamp(14px, 1.8vw, 15px); /* 调整为与abstract相同的字号 */
+    font-size: clamp(14px, 1.8vw, 15px);
     font-weight: 500;
     color: #222;
     display: flex;
@@ -230,32 +233,32 @@ h3 {
 }
 
 .paper-title {
-    color: #7851A9; /* 指定的紫色 */
+    color: #7851A9;
     text-decoration: none;
     transition: color 0.2s;
     font-weight: 500;
 }
 
 .paper-title:hover {
-    color: #674399; /* 深一点的紫色 */
+    color: #674399;
     text-decoration: underline;
 }
 
 .coauthor {
-    font-size: clamp(13px, 1.7vw, 14px); /* 相应调整合作者字号 */
+    font-size: clamp(13px, 1.7vw, 14px);
     font-style: italic;
     color: #555;
     font-weight: 400;
 }
 
 .coauthor a {
-    color: #7851A9; /* 指定的紫色 */
+    color: #7851A9;
     text-decoration: none;
     transition: color 0.2s;
 }
 
 .coauthor a:hover {
-    color: #674399; /* 深一点的紫色 */
+    color: #674399;
     text-decoration: underline;
 }
 
@@ -273,19 +276,20 @@ h3 {
     color: #555;
 }
 
-.abstract {
-    margin-bottom: 12px;
-    color: #555; /* 改为与contact-info一致的颜色 */
-    line-height: 1.7;
-    /* 摘要两端对齐 */
-    text-align: justify;
-    font-size: clamp(14px, 2vw, 15px); /* 改为与contact-info一致的字号 */
+/* Abstract 正文 - 增强特异性 */
+.research-section .paper .abstract {
+    margin-bottom: 12px !important;
+    color: #555 !important;
+    line-height: 1.7 !important;
+    text-align: justify !important;
+    font-size: clamp(14px, 2vw, 15px) !important;
 }
 
-.abstract-label {
-    font-weight: 600;
-    color: #222; /* 与Microeconomic Theory颜色一致 */
-    font-size: clamp(14px, 2vw, 15px); /* 与Microeconomic Theory字号一致 */
+/* Abstract 标签 - 增强特异性 */
+.research-section .paper .abstract .abstract-label {
+    font-weight: 600 !important;
+    color: #222 !important;
+    font-size: clamp(14px, 2vw, 15px) !important;
 }
 
 .paper-links {
@@ -294,7 +298,7 @@ h3 {
 }
 
 .paper-links a {
-    color: #7851A9; /* 指定的紫色 */
+    color: #7851A9;
     text-decoration: none;
     font-size: 14px;
     transition: color 0.2s;
@@ -302,25 +306,25 @@ h3 {
 }
 
 .paper-links a:hover {
-    color: #674399; /* 深一点的紫色 */
+    color: #674399;
     text-decoration: underline;
 }
 
-/* 新增样式：为工作论文和工作进展中的项目设置与Microeconomic Theory一致 */
-.paper-item {
-    font-size: clamp(14px, 2vw, 15px); /* 与Microeconomic Theory相同的字号 */
-    font-weight: 500;
-    color: #222; /* 与Microeconomic Theory相同的颜色 */
-    margin-bottom: 8px;
-    line-height: 1.5;
+/* 论文项目 - 增强特异性 */
+.research-section .paper-list .paper-item {
+    font-size: clamp(14px, 2vw, 15px) !important;
+    font-weight: 500 !important;
+    color: #222 !important;
+    margin-bottom: 8px !important;
+    line-height: 1.5 !important;
 }
 
 /* 为草稿可用文本设置斜体和与coauthor相同的字号 */
 .draft-note {
-    font-style: italic;
-    font-size: clamp(13px, 1.7vw, 14px); /* 与coauthor相同的字号 */
-    color: #555;
-    font-weight: 400;
+    font-style: italic !important;
+    font-size: clamp(13px, 1.7vw, 14px) !important;
+    color: #555 !important;
+    font-weight: 400 !important;
 }
 
 .work-in-progress {
@@ -328,9 +332,9 @@ h3 {
 }
 
 .work-in-progress ul {
-    margin-left: clamp(15px, 3vw, 20px); /* 响应式左侧间距 */
+    margin-left: clamp(15px, 3vw, 20px);
     padding-left: 0;
-    list-style: disc; /* 添加小圆点项目符号 */
+    list-style: disc;
     color: #444;
 }
 
@@ -377,7 +381,7 @@ h3 {
     }
     
     .paw-print {
-        font-size: 28px; /* 移动端稍小一点 */
+        font-size: 28px;
     }
     
     h3 {
