@@ -301,8 +301,8 @@ h3 {
 
 /* 普通文本的论文项目 - 浅灰色不加粗，字号与paper-title一致 */
 .paper-plain {
-    font-size: clamp(14px, 1.8vw, 15px) !important; /* 改为与paper-title相同的字号 */
-    font-weight: 400 !important; /* 正常字重，不加粗 */
+    font-size: clamp(14px, 1.8vw, 15px) !important;
+    font-weight: 400 !important;
     color: #444 !important;
     margin-bottom: 8px !important;
     line-height: 1.5 !important;
@@ -374,14 +374,27 @@ h3 {
     }
     
     h3 {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
+        flex-direction: row; /* 保持水平排列 */
+        align-items: baseline;
+        gap: 8px;
+        flex-wrap: wrap; /* 允许换行但保持自然 */
     }
     
     .paper-header {
         flex-direction: column;
         align-items: flex-start;
+    }
+    
+    /* 修复合作者信息换行问题 */
+    .coauthor {
+        white-space: nowrap; /* 防止合作者信息内部换行 */
+        font-size: clamp(12px, 1.6vw, 13px); /* 在移动端稍微缩小字号 */
+    }
+    
+    /* 确保论文标题在移动端可以正常换行 */
+    .paper-title {
+        word-break: break-word;
+        hyphens: auto;
     }
 }
 
@@ -404,6 +417,11 @@ h3 {
     
     .paw-print {
         font-size: 26px;
+    }
+    
+    /* 在超小屏幕上进一步优化合作者信息 */
+    .coauthor {
+        font-size: clamp(11px, 1.5vw, 12px);
     }
 }
 
@@ -443,5 +461,14 @@ h3 {
     
     .paw-print {
         font-size: 24px;
+    }
+    
+    /* 在超小屏幕上优化论文标题布局 */
+    h3 {
+        gap: 6px;
+    }
+    
+    .coauthor {
+        font-size: 11px;
     }
 }
