@@ -169,7 +169,7 @@ h1 {
     transform: scale(1.2) rotate(8deg);
 }
 
-/* Microeconomic Theory 和 dynamic games 的样式 - 浅灰色 */
+/* Microeconomic Theory 和 dynamic games, organizational economics 的样式 - 浅灰色加粗 */
 .bold-text {
     font-weight: 600 !important;
     color: #444 !important;
@@ -269,7 +269,7 @@ h3 {
     font-size: clamp(14px, 1.8vw, 15px);
 }
 
-/* Abstract 标签 - 浅灰色 */
+/* Abstract 标签 - 浅灰色加粗 */
 .abstract-label {
     font-weight: 600 !important;
     color: #444 !important;
@@ -299,10 +299,10 @@ h3 {
     margin-bottom: 10px;
 }
 
-/* 论文项目 - 浅灰色 */
-.paper-item {
+/* 普通文本的论文项目 - 浅灰色不加粗 */
+.paper-plain {
     font-size: clamp(14px, 2vw, 15px) !important;
-    font-weight: 600 !important;
+    font-weight: 400 !important; /* 正常字重，不加粗 */
     color: #444 !important;
     margin-bottom: 8px !important;
     line-height: 1.5 !important;
