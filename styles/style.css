@@ -65,7 +65,7 @@ body {
 .header-content {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; /* 底部对齐 */
+    align-items: flex-start; /* 改为顶部对齐 */
     gap: clamp(20px, 4vw, 40px);
     flex-wrap: wrap;
 }
@@ -73,10 +73,6 @@ body {
 .text-info {
     flex: 1;
     min-width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 220px; /* 设置最小高度与照片匹配 */
 }
 
 h1 {
@@ -101,10 +97,13 @@ h1 {
 .welcome-text {
     text-align: justify;
     color: #555 !important;
+    /* 强制在particularly前换行 */
+    word-wrap: break-word;
 }
 
-/* 从particularly开始换行 */
-.welcome-text br {
+/* 强制换行 */
+.welcome-text::after {
+    content: "";
     display: block;
 }
 
@@ -134,8 +133,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-top: auto; /* 推到容器底部 */
-    padding-top: 10px; /* 添加一些间距 */
+    margin-top: 5px;
 }
 
 .cv-button {
@@ -189,7 +187,7 @@ h1 {
 .photo-container {
     flex-shrink: 0;
     display: flex;
-    align-items: flex-end; /* 照片底部对齐 */
+    align-items: flex-start; /* 照片顶部对齐 */
 }
 
 .profile-photo {
@@ -353,14 +351,13 @@ h3 {
     .header-content {
         flex-direction: column-reverse;
         gap: 20px;
-        align-items: center; /* 移动端居中对齐 */
+        align-items: center;
         text-align: center;
     }
     
     .text-info {
         min-width: auto;
         width: 100%;
-        min-height: auto; /* 移动端取消最小高度 */
     }
     
     .photo-container {
@@ -373,7 +370,6 @@ h3 {
     
     .button-container {
         justify-content: center;
-        margin-top: 15px; /* 移动端恢复正常边距 */
     }
     
     .cv-button {
