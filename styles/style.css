@@ -301,8 +301,8 @@ h3 {
 
 /* 普通文本的论文项目 - 浅灰色不加粗，字号与paper-title一致 */
 .paper-plain {
-    font-size: clamp(14px, 1.8vw, 15px) !important; /* 改为与paper-title相同的字号 */
-    font-weight: 400 !important; /* 正常字重，不加粗 */
+    font-size: clamp(14px, 1.8vw, 15px) !important;
+    font-weight: 400 !important;
     color: #444 !important;
     margin-bottom: 8px !important;
     line-height: 1.5 !important;
