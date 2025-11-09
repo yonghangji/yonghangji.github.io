@@ -38,11 +38,9 @@
     }
     
     h3 {
-        flex-direction: row; /* 确保水平排列 */
-        align-items: baseline;
-        gap: 6px; /* 减小间距 */
-        flex-wrap: nowrap; /* 禁止换行 */
-        overflow: hidden; /* 隐藏溢出的内容 */
+        flex-direction: column; /* 改为垂直排列 */
+        align-items: flex-start;
+        gap: 4px;
     }
     
     .paper-header {
@@ -50,19 +48,19 @@
         align-items: flex-start;
     }
     
-    /* 确保标题和合作者在一行 */
-    .paper-title {
-        white-space: nowrap; /* 标题不换行 */
-        overflow: hidden;
-        text-overflow: ellipsis; /* 如果太长显示省略号 */
-        flex-shrink: 1; /* 允许缩小 */
-        min-width: 0; /* 允许缩小到0 */
+    /* 确保合作者信息在标题下方正确显示 */
+    .coauthor {
+        white-space: normal;
+        font-size: clamp(12px, 1.6vw, 13px);
+        margin-top: 2px;
     }
     
-    .coauthor {
-        white-space: nowrap; /* 合作者信息不换行 */
-        flex-shrink: 0; /* 不允许缩小 */
-        font-size: clamp(12px, 1.6vw, 13px);
+    /* 确保论文标题在移动端可以正常换行 */
+    .paper-title {
+        word-break: break-word;
+        hyphens: auto;
+        display: block;
+        width: 100%;
     }
 }
 
@@ -88,61 +86,17 @@
         font-size: 26px;
     }
     
-    /* 在超小屏幕上进一步压缩间距 */
-    h3 {
-        gap: 4px;
-    }
-    
-    .coauthor {
-        font-size: clamp(11px, 1.5vw, 12px);
-    }
-    
-    .paper-title {
-        font-size: clamp(13px, 1.7vw, 14px);
-    }
-}
-
-/* 超小屏幕优化 */
-@media (max-width: 360px) {
-    body {
-        padding: 5px;
-    }
-    
-    .main-content {
-        padding: 12px;
-    }
-    
-    .profile-photo {
-        width: 130px;
-    }
-    
-    h1 {
-        font-size: 24px;
-    }
-    
-    h2 {
-        font-size: 18px;
-    }
-    
-    .button-container {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .paw-print {
-        font-size: 24px;
-    }
-    
-    /* 在超小屏幕上使用更小的字号和间距 */
+    /* 在超小屏幕上优化论文标题布局 */
     h3 {
         gap: 3px;
     }
     
     .coauthor {
-        font-size: 10px;
+        font-size: clamp(11px, 1.5vw, 12px);
+        line-height: 1.3;
     }
     
     .paper-title {
-        font-size: 12px;
+        font-size: clamp(13px, 1.7vw, 14px);
     }
 }
