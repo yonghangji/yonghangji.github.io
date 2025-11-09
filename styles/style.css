@@ -80,6 +80,8 @@ h1 {
     font-weight: 600;
     margin-bottom: 15px;
     color: #222;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .contact-info {
@@ -179,7 +181,9 @@ h1 {
 .photo-container {
     flex-shrink: 0;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start; /* 改为顶部对齐 */
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .profile-photo {
@@ -189,6 +193,7 @@ h1 {
     box-shadow: none;
     border: none;
     object-fit: cover;
+    margin-top: 0;
 }
 
 .research-section {
