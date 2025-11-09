@@ -41,8 +41,8 @@
         flex-direction: row; /* 确保水平排列 */
         align-items: baseline;
         gap: 6px; /* 减小间距 */
-        flex-wrap: nowrap; /* 禁止换行 */
-        overflow: hidden; /* 隐藏溢出的内容 */
+        flex-wrap: wrap; /* 改为允许换行 */
+        overflow: visible; /* 改为可见 */
     }
     
     .paper-header {
@@ -52,11 +52,12 @@
     
     /* 确保标题和合作者在一行 */
     .paper-title {
-        white-space: nowrap; /* 标题不换行 */
-        overflow: hidden;
-        text-overflow: ellipsis; /* 如果太长显示省略号 */
+        white-space: normal; /* 改为正常换行 */
+        overflow: visible; /* 改为可见 */
+        text-overflow: clip; /* 改为裁剪 */
         flex-shrink: 1; /* 允许缩小 */
         min-width: 0; /* 允许缩小到0 */
+        max-width: calc(100% - 100px); /* 给合作者信息留出空间 */
     }
     
     .coauthor {
@@ -99,6 +100,7 @@
     
     .paper-title {
         font-size: clamp(13px, 1.7vw, 14px);
+        max-width: calc(100% - 90px); /* 在更小屏幕上调整空间分配 */
     }
 }
 
@@ -144,5 +146,6 @@
     
     .paper-title {
         font-size: 12px;
+        max-width: calc(100% - 80px); /* 在超小屏幕上进一步调整 */
     }
 }
