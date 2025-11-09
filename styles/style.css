@@ -170,6 +170,8 @@ h1 {
 
 .bold-text {
     font-weight: 600;
+    color: #222; /* 与标题颜色一致 */
+    font-size: clamp(14px, 2vw, 15px); /* 与contact-info一致 */
 }
 
 .photo-container {
@@ -273,16 +275,17 @@ h3 {
 
 .abstract {
     margin-bottom: 12px;
-    color: #444;
+    color: #555; /* 改为与contact-info一致的颜色 */
     line-height: 1.7;
     /* 摘要两端对齐 */
     text-align: justify;
-    font-size: clamp(14px, 1.8vw, 15px);
+    font-size: clamp(14px, 2vw, 15px); /* 改为与contact-info一致的字号 */
 }
 
 .abstract-label {
     font-weight: 600;
-    color: #222;
+    color: #222; /* 与Microeconomic Theory颜色一致 */
+    font-size: clamp(14px, 2vw, 15px); /* 与Microeconomic Theory字号一致 */
 }
 
 .paper-links {
@@ -303,11 +306,11 @@ h3 {
     text-decoration: underline;
 }
 
-/* 新增样式：为工作论文和工作进展中的项目设置与论文标题相同的字号 */
+/* 新增样式：为工作论文和工作进展中的项目设置与Microeconomic Theory一致 */
 .paper-item {
-    font-size: clamp(14px, 1.8vw, 15px); /* 与论文标题相同的字号 */
+    font-size: clamp(14px, 2vw, 15px); /* 与Microeconomic Theory相同的字号 */
     font-weight: 500;
-    color: #222;
+    color: #222; /* 与Microeconomic Theory相同的颜色 */
     margin-bottom: 8px;
     line-height: 1.5;
 }
