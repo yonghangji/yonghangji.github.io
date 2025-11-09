@@ -169,11 +169,11 @@ h1 {
     transform: scale(1.2) rotate(8deg);
 }
 
-/* Microeconomic Theory 的样式 */
+/* Microeconomic Theory 的样式 - 这是基准样式 */
 .bold-text {
-    font-weight: 600 !important;
-    color: #222 !important;
-    font-size: clamp(14px, 2vw, 15px) !important;
+    font-weight: 600;
+    color: #222;
+    font-size: clamp(14px, 2vw, 15px);
 }
 
 .photo-container {
@@ -260,42 +260,37 @@ h3 {
     text-decoration: underline;
 }
 
-/* Abstract 正文 - 修复选择器 */
+/* Abstract 正文保持原来的样式 */
 .abstract {
-    margin-bottom: 12px !important;
-    color: #555 !important;
-    line-height: 1.7 !important;
-    text-align: justify !important;
-    font-size: clamp(14px, 2vw, 15px) !important;
+    margin-bottom: 12px;
+    color: #444;
+    line-height: 1.7;
+    text-align: justify;
+    font-size: clamp(14px, 1.8vw, 15px);
 }
 
-/* Abstract 标签 - 修复选择器 */
+/* Abstract 标签 - 改为和Microeconomic Theory一样 */
 .abstract-label {
-    font-weight: 600 !important;
-    color: #222 !important;
-    font-size: clamp(14px, 2vw, 15px) !important;
+    font-weight: 600;
+    color: #222;
+    font-size: clamp(14px, 2vw, 15px);
 }
 
-/* 添加缺失的 paper-list 类定义 */
-.paper-list {
-    margin-bottom: 10px;
-}
-
-/* 论文项目 - 简化选择器 */
+/* 论文项目 - 改为和Microeconomic Theory一样 */
 .paper-item {
-    font-size: clamp(14px, 2vw, 15px) !important;
-    font-weight: 500 !important;
-    color: #222 !important;
-    margin-bottom: 8px !important;
-    line-height: 1.5 !important;
+    font-size: clamp(14px, 2vw, 15px);
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 8px;
+    line-height: 1.5;
 }
 
 /* 为草稿可用文本设置斜体和与coauthor相同的字号 */
 .draft-note {
-    font-style: italic !important;
-    font-size: clamp(13px, 1.7vw, 14px) !important;
-    color: #555 !important;
-    font-weight: 400 !important;
+    font-style: italic;
+    font-size: clamp(13px, 1.7vw, 14px);
+    color: #555;
+    font-weight: 400;
 }
 
 .work-in-progress {
