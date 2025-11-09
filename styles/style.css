@@ -172,7 +172,7 @@ h1 {
 /* Microeconomic Theory 的样式 - 这是基准样式 */
 .bold-text {
     font-weight: 600;
-    color: #222;
+    color: #444;
     font-size: clamp(14px, 2vw, 15px);
 }
 
