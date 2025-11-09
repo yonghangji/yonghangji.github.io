@@ -65,7 +65,7 @@ body {
 .header-content {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* 改为顶部对齐 */
+    align-items: flex-start;
     gap: clamp(20px, 4vw, 40px);
     flex-wrap: wrap;
 }
@@ -97,14 +97,6 @@ h1 {
 .welcome-text {
     text-align: justify;
     color: #555 !important;
-    /* 强制在particularly前换行 */
-    word-wrap: break-word;
-}
-
-/* 强制换行 */
-.welcome-text::after {
-    content: "";
-    display: block;
 }
 
 /* 所有链接都使用指定的紫色 */
@@ -187,7 +179,7 @@ h1 {
 .photo-container {
     flex-shrink: 0;
     display: flex;
-    align-items: flex-start; /* 照片顶部对齐 */
+    align-items: flex-end;
 }
 
 .profile-photo {
