@@ -169,10 +169,8 @@ h1 {
     transform: scale(1.2) rotate(8deg);
 }
 
-/* Microeconomic Theory 的样式 - 增强特异性 */
-.contact-info .bold-text,
-.text-info .bold-text,
-.info-line .bold-text {
+/* Microeconomic Theory 的样式 */
+.bold-text {
     font-weight: 600 !important;
     color: #222 !important;
     font-size: clamp(14px, 2vw, 15px) !important;
@@ -262,22 +260,8 @@ h3 {
     text-decoration: underline;
 }
 
-.paper-status {
-    font-size: 13px;
-    background-color: #f0f0f0;
-    padding: 3px 8px;
-    border-radius: 4px;
-    color: #666;
-}
-
-.authors {
-    font-style: italic;
-    margin-bottom: 10px;
-    color: #555;
-}
-
-/* Abstract 正文 - 增强特异性 */
-.research-section .paper .abstract {
+/* Abstract 正文 - 修复选择器 */
+.abstract {
     margin-bottom: 12px !important;
     color: #555 !important;
     line-height: 1.7 !important;
@@ -285,33 +269,20 @@ h3 {
     font-size: clamp(14px, 2vw, 15px) !important;
 }
 
-/* Abstract 标签 - 增强特异性 */
-.research-section .paper .abstract .abstract-label {
+/* Abstract 标签 - 修复选择器 */
+.abstract-label {
     font-weight: 600 !important;
     color: #222 !important;
     font-size: clamp(14px, 2vw, 15px) !important;
 }
 
-.paper-links {
-    display: flex;
-    gap: 15px;
+/* 添加缺失的 paper-list 类定义 */
+.paper-list {
+    margin-bottom: 10px;
 }
 
-.paper-links a {
-    color: #7851A9;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.2s;
-    font-weight: 500;
-}
-
-.paper-links a:hover {
-    color: #674399;
-    text-decoration: underline;
-}
-
-/* 论文项目 - 增强特异性 */
-.research-section .paper-list .paper-item {
+/* 论文项目 - 简化选择器 */
+.paper-item {
     font-size: clamp(14px, 2vw, 15px) !important;
     font-weight: 500 !important;
     color: #222 !important;
